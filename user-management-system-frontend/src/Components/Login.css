@@ -1,0 +1,97 @@
+.Form-Login {
+    width: 28%;
+    box-shadow: 0px 1px 6px 4px #d0dff5;
+
+}
+
+.Form-Login:hover {
+    width: 30%;
+    box-shadow: 0px 1px 4px 2px #ebeef3;
+    transition: 0.3s;
+    cursor: pointer;
+
+}
+
+.Log-h {
+    text-align: center;
+    background-color: #bdc4ce;
+    padding: 10px;
+    border-radius: 5px;
+    color: #325cda;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 1000;
+
+}
+
+input[type=email],
+select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    background-color: rgb(211, 217, 221);
+}
+
+input[type=password],
+select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    background-color: rgb(211, 217, 221);
+}
+
+input[type=submit] {
+    width: 100%;
+    background-color: #4b87b9;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type=submit]:hover {
+    background-color: #5f8bce;
+}
+
+.Form-Login {
+       margin: 50px auto;
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 10px;
+    justify-content: center;
+    border-radius: 14px;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+    border: 2px solid rgb(212, 223, 228);
+    border-radius: 5px;
+}
+
+button[type=submit] {
+    width: 100%;
+    background-color: #4b87b9;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+a {
+    color: #bdc4ce;
+    text-decoration: none;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+}
