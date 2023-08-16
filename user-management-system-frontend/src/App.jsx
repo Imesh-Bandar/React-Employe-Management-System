@@ -6,8 +6,8 @@ function App() {
   return (
     <>
       <div className="NavBar ">
-        <nav class="navbar navbar-light bg-primary  ">
-          <a class="navbar-brand p-2" href="#">Employ Management System</a>
+        <nav className="navbar navbar-light bg-primary  ">
+          <a className="navbar-brand p-2" href="#">Employ Management System</a>
 
         </nav>
         <Login />

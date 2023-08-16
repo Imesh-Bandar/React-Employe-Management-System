@@ -12,7 +12,7 @@ function Login() {
         Password: ''
     });
     const HandleSumbit = (event) => {
-        event.preventDefault;
+        event.preventDefault();
         //Post the  Form Data to Backend Server Using Axios
         /*
         
@@ -20,9 +20,9 @@ function Login() {
             axios.method('Backend url',Passing Values);
             axios.post('http://localhost:5001/api/auth', values);
         */
-        axios.post('//BackendUrl',values)
-        .then(res=>console.log(res))
-        .catch(res=>console.log(err))
+        axios.post('http://localhost:8082/login', values)
+            .then(res => console.log(res))
+            .catch(res => console.log(err))
     }
     return (
         <>
@@ -30,12 +30,12 @@ function Login() {
                 <div className="Form-Login">
                     <form onSubmit={HandleSumbit}>
                         <h3 className="Log-h">Login</h3>
-                        <img src="https://img.freepik.com/free-vector/mobile-login-concept-illustration_114360-83.jpg?w=2000" alt="" srcset="" /><br />
-                        <label for="fname">Email</label>
+                        <img src="https://img.freepik.com/free-vector/mobile-login-concept-illustration_114360-83.jpg?w=2000" alt=""  /><br />
+                        <label htmlFor="fname">Email</label>
                         {/*Bind the Input Email value with Values Array using event */}
                         <input type="email" onChange={e => setValue({ ...values, Email: e.target.value })} id="Email" placeholder="Enter Your Email.." />
 
-                        <label for="lname">Password</label>
+                        <label htmlFor="lname">Password</label>
                         {/*Bind the Input Password value with Values Array using event */}
                         <input type="password" onChange={e => setValue({ ...values, Password: e.target.value })} id="Password" placeholder="Enter Your Password.." />
 

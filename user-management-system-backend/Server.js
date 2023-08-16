@@ -22,7 +22,7 @@ const Database = mysql.createConnection({
     host: 'localhost',
     user: 'root',
     password: '',
-    database: 'employeemanagement'
+    database: 'singup'
 
 })
 //Server PORT
@@ -38,6 +38,24 @@ Database.connect((err) => {
         console.log(`Database Connected.`);
     }
 });
+//==========API Login Route=========
+app.post('/login', (req, res) => {
+    const values = req.body
+    const sql = "SELECT * FROM user WHERE Email=? AND Password =?";
+    Database.query(sql, [values.Email, values.Password], (err, result) => {
+        if (err) {
+            return res.status(500).json({ Message: "Error in Server" })
+        } else {
+            //check result lenth
+            if (result.length > 0) {
+                return res.status(200).json({ message: "Successfully Login" })
+            } else {
+                return res.status(401).json({ meessage: "Error" });
+            }
+
+        }
+    })
+})
 
 
 
