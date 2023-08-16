@@ -18,7 +18,34 @@ app.use(cookieParser());
 app.use(express.json());
 
 //Create mysql Database Connection 
-const Connection=mysql.createConnection({
-    //
+const Database = mysql.createConnection({
+    host: 'localhost',
+    user: 'root',
+    password: '',
+    database: 'employeemanagement'
+
 })
+//Server PORT
+const HTTP_PORT = 8082;
+
+//Connect to database
+
+Database.connect((err) => {
+    if (err) {
+        console.log(`Error connecting ${err}`);
+
+    } else {
+        console.log(`Database Connected.`);
+    }
+});
+
+
+
+//server create
+app.listen(HTTP_PORT, () => {
+    console.log(`Server is running on ${HTTP_PORT}`);
+
+});
+
+
 
